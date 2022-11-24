@@ -1059,14 +1059,14 @@ void NvgWindow::drawThermal(QPainter &p) {
   p.setPen(QColor(255, 255, 255, 200));
   p.drawText(rect, Qt::AlignCenter, "CPU");
 
-  y += 80;
-  configFont(p, "Open Sans", 50, "Bold");
-  str.sprintf("%.0f°C", ambientTemp);
-  rect = QRect(x, y, w, w);
-  r = interp<float>(ambientTemp, {35.f, 60.f}, {200.f, 255.f}, false);
-  g = interp<float>(ambientTemp, {35.f, 60.f}, {255.f, 200.f}, false);
-  p.setPen(QColor(r, g, 200, 200));
-  p.drawText(rect, Qt::AlignCenter, str);
+  //y += 80;
+  //configFont(p, "Open Sans", 50, "Bold");
+  //str.sprintf("%.0f°C", ambientTemp);
+  //rect = QRect(x, y, w, w);
+  //r = interp<float>(ambientTemp, {35.f, 60.f}, {200.f, 255.f}, false);
+  //g = interp<float>(ambientTemp, {35.f, 60.f}, {255.f, 200.f}, false);
+  //p.setPen(QColor(r, g, 200, 200));
+  //p.drawText(rect, Qt::AlignCenter, str);
 
   y += 55;
   configFont(p, "Open Sans", 25, "Bold");

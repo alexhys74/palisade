@@ -3,12 +3,12 @@ from common.realtime import DT_MDL
 from common.conversions import Conversions as CV
 from common.params import Params
 
-AUTO_LCA_START_TIME = 1.0
+AUTO_LCA_START_TIME = 0.02
 
 LaneChangeState = log.LateralPlan.LaneChangeState
 LaneChangeDirection = log.LateralPlan.LaneChangeDirection
 
-LANE_CHANGE_SPEED_MIN = 60 * CV.KPH_TO_MS
+LANE_CHANGE_SPEED_MIN = 20 * CV.KPH_TO_MS
 LANE_CHANGE_TIME_MAX = 10.
 
 DESIRES = {
@@ -91,7 +91,7 @@ class DesireHelper:
       # LaneChangeState.laneChangeStarting
       elif self.lane_change_state == LaneChangeState.laneChangeStarting:
         # fade out over .5s
-        self.lane_change_ll_prob = max(self.lane_change_ll_prob - 2 * DT_MDL, 0.0)
+        self.lane_change_ll_prob = max(self.lane_change_ll_prob - 0.9 * DT_MDL, 0.0) # 2.0
 
         # 98% certainty
         if lane_change_prob < 0.02 and self.lane_change_ll_prob < 0.01:

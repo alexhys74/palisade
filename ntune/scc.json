@@ -8,7 +8,7 @@
     "stopAccel": -2.0,
     "STOP_DISTANCE": 6.0,
     "COMFORT_BRAKE": 2.5,
-    "StopAtStopSign": 1.0,
+    "StopAtStopSign": 0.0,
     "TrafficStopDistanceAdjust": 4.0,
     "X_EGO_OBSTACLE_COST": 6.0
 }

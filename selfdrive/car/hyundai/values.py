@@ -55,7 +55,7 @@ class CarControllerParams:
       
     # Default for most HKG
     else:
-      self.STEER_MAX = 384 #409 수정
+      self.STEER_MAX = 390 #409 수정
       self.STEER_DELTA_UP = 3
       self.STEER_DELTA_DOWN = 5
 
